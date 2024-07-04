@@ -46,4 +46,14 @@ public class StepDefinitions {
     public void titleHasText(String text) {
         assertEquals(mainPage.title.getText(), text);
     }
+
+    @Then("user sees Error")
+    public void userSeesError() {
+        authPage.dataTestError.shouldBe(visible);
+    }
+    @And("Error has text {string}")
+    public void errorHasText(String text) {
+        assertEquals(authPage.dataTestError.getText(), text);
+    }
+
 }
