@@ -8,6 +8,8 @@ Feature: Auth
     Then user sees Title
     And Title has text "Products"
 
+
+ //Scenario: Unsuccessful authorisation from Anna Burnaeva
   Scenario: Unsuccessful authorisation AR
     Given open "https://www.saucedemo.com/"
     When user input login "locked_out_user"
